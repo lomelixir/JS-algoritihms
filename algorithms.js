@@ -240,14 +240,94 @@ let encendido = false;
 function calentador(agua) {
     if (agua === true) {
         encendido = true;
-        console.log("Calentador encendido.")
+        console.log(`Calentador encendido. ${encendido}`)
         for (let i = tempInicial; i <= 100; i = i+25) {
             console.log(`Calentando agua. Temperatura de ${i} grados.`);
         }
-        console.log("Temperatura máxima. Calentador apagado.");
+        console.log(`Temperatura máxima. Calentador apagado. ${!encendido}`);
     } else {
-        console.log("Calentador sin agua. No puede encender.")
+        console.log(`Calentador sin agua. No puede encender. ${encendido}`)
     }
 }
 // calentador(true); //CORRECTO
+
+
+
+//12.- Batería portátil
+let potencia;
+
+function bateria(dispositivo) {
+    if (dispositivo === "telefono") {
+        potencia = 25;
+        console.log(`Potencia de ${potencia} Watts.`);
+    }
+    else if (dispositivo === "celular") {
+        potencia = 25;
+        console.log(`Potencia de ${potencia} Watts.`);
+    }
+    else if (dispositivo === "laptop") {
+        potencia = 65;
+        console.log(`Potencia de ${potencia} Watts.`);
+    } 
+    else if (dispositivo === "lampara") {
+        potencia = 5;
+        console.log(`Potencia de ${potencia} Watts."`);
+    } 
+    else {
+        potencia = 0;
+        console.log(`Potencia de ${potencia} Watts.`);
+    }
+}
+// bateria("telefono"); //CORRECTO
+
+//12.1.- Batería portátil utilizando switch.
+let potencia1;
+
+function bateria1(dispo) {
+    switch (dispo) {
+        case "telefono":
+            potencia1 = 25;
+            console.log(`Potencia de ${potencia1} Watts.`);
+            break;
+        case "celular":
+            potencia1 = 25;
+            console.log(`Potencia de ${potencia1} Watts.`);
+            break;
+        case "laptop":
+            potencia1 = 65;
+            console.log(`Potencia de ${potencia1} Watts.`);
+            break;
+        case "lampara":
+            potencia1 = 5;
+            console.log(`Potencia de ${potencia1} Watts.`);
+            break;
+        default:
+            potencia1 = 0;
+            console.log(`Dispositivo no reconocido. Potencia de ${potencia1} Watts.`);
+    }
+}
+// bateria1("tele"); //CORRECTO
+
+
+
+//13.- Molino de café 
+let contenedor = true;
+let tiempo = 50;
+
+function molino(contenedor1, tazas) {
+    if (contenedor1 === true) {
+        if (tazas > 0) {
+            tiempo *= tazas;
+            console.log(`Iniciando Proceso. ${tazas} tazas. ${tiempo} segundos.`)
+        } else {
+            console.log("No se ha seleccionado el número de tazas.");
+        }
+    } else {
+        console.log("Nose puede encender. Falta contenedor.");
+    }
+}
+molino(true, 3);
+
+
+
 
