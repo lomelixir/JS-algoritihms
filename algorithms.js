@@ -144,7 +144,7 @@ function mayor(array) {
 // mayor(cuatroNumeros);
 
 
-// function hola(array) {
+// function mayor1(array) {
 //     let primerIndice = array[0];
 //     let segundoIndice = array[1];
 //     if(primerIndice > segundoIndice) {
@@ -162,9 +162,9 @@ function mayor(array) {
 //             }
 //     }
 // }
-// hola(cuatroNumeros);
+// mayor1(cuatroNumeros);
 
-// function hola2(array) {
+// function mayor2(array) {
 //     let primerIndice = array[0];
 //     let segundoIndice = array[1];
 //     for(i = 2; i < array[0]; i++ ) {
@@ -173,9 +173,9 @@ function mayor(array) {
 //         }
 //     }
 // }
-// hola2(cuatroNumeros);
+// mayor2(cuatroNumeros);
 
-function hola3(array) {
+function mayor3(array) {
     let primero = array[0];
     let mayor = 0;
     for(i = 0; i <= array.length; i++) {
@@ -185,4 +185,69 @@ function hola3(array) {
     }
     
 }
-hola3(cuatroNumeros);
+// mayor3(cuatroNumeros);
+
+
+
+//9.- Tamaño máximo de carga
+let tamaño = 6;
+let tamañoMax = 5;
+
+function tamañoArchivo(archivo) {
+    if (archivo <= tamañoMax) {
+        console.log("El archivo cumple con el tamaño permitido");
+    } else {
+        console.log("EL archivo ha excedido el tamaño máximo permitdo");
+    }
+}
+// tamañoArchivos(tamaño); //CORRECTO
+
+//9.1.- Tamaño máximo de carga con varios archivos.
+let archivos = [1, 2, 3, 4, 5, 6];
+
+function tamañoArchivos(tamaños) {
+    for (let arch of tamaños) {
+        if (arch <= 5) {
+            console.log(`El archivo ${arch} cumple con el tamaño permitido`);
+        } else {
+            console.log("EL archivo ha excedido el tamaño máximo permitdo");
+        }
+    }
+}
+// tamañoArchivos(archivos); //CORRECTO
+
+
+
+//10.- Contraseña más segura
+const password1 = "micontra123";
+const passwordLength = 12;
+
+function passwordSecurity(password) {
+    if (password.length <= passwordLength) {
+        console.log(`Constraseña ACEPTADA. Número de caracteres ${password.length}`);
+    } else {
+        console.log(`Constraseña RECHAZADA. Número de caracteres ${password.length}`);
+    }
+}
+// passwordSecurity(password1); //CORRECTO
+
+
+
+//11.- Pasos para utilizar un calentador de agua elećtrico. Utilizando for-loop
+const tempInicial = 0;
+let encendido = false;
+
+function calentador(agua) {
+    if (agua === true) {
+        encendido = true;
+        console.log("Calentador encendido.")
+        for (let i = tempInicial; i <= 100; i = i+25) {
+            console.log(`Calentando agua. Temperatura de ${i} grados.`);
+        }
+        console.log("Temperatura máxima. Calentador apagado.");
+    } else {
+        console.log("Calentador sin agua. No puede encender.")
+    }
+}
+// calentador(true); //CORRECTO
+
