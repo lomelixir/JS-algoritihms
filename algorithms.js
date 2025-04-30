@@ -326,8 +326,68 @@ function molino(contenedor1, tazas) {
         console.log("Nose puede encender. Falta contenedor.");
     }
 }
-molino(true, 3);
+// molino(true, 3); //CORRECTO
 
 
 
+//14.- Préstamos
+let tasa = 0;
+
+function prestamo(cuenta, puntaje) {
+    if (cuenta == true) {
+        if (puntaje >= 750) {
+            tasa = 10;
+            console.log(`Préstamo aprobado. Tasa del ${tasa} %.`);
+        } 
+        else if (puntaje >= 700) {
+            tasa = 15;
+            console.log(`Préstamo aprobado. Tasa del ${tasa} %. Descuento del 10 % en préstamo.`)
+        }
+        else if (puntaje >= 650) {
+            tasa = 10;
+            console.log(`Préstamo aprobado. Tasa del ${tasa} %.`);
+        }
+    } else {
+        console.log("Usuario no tiene cuenta.");
+    }
+}
+// prestamo(true, 650); // CORRECTO    
+
+
+
+//15.- Alimentador mascota
+let comida;
+
+function alimentador(mascota, peso) {
+    switch (mascota) {
+        case "perro": 
+        if (peso >= 20) {
+            comida = 400;
+            console.log(`Cantidad de comida: ${comida} gramos.`)
+        } else if (peso >= 10) {
+            comida = 300;
+            console.log(`Cantidad de comida: ${comida} gramos.`)
+        } else if (peso >= 5) {
+            comida = 200;
+            console.log(`Cantidad de comida: ${comida} gramos.`)
+        } else {
+            comida = 100;
+            console.log(`Cantidad de comida: ${comida} gramos.`)
+        }
+        break;
+        case "gato":
+            if (peso >= 6) {
+                comida = 150;
+                console.log(`Cantidad de comida: ${comida} gramos.`)
+            } else if (peso >= 3) {
+                comida = 100;
+                console.log(`Cantidad de comida: ${comida} gramos.`)
+            } else {
+                comida = 50;
+                console.log(`Cantidad de comida: ${comida} gramos.`)
+            }
+            break;
+    }
+}
+// alimentador("gato", 2); //CORRECTO
 
