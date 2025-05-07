@@ -121,8 +121,6 @@ function combinarOrdenar(array1, array2) {
     console.log(ordenado);
 }
 // combinarOrdenar(numeros1, numeros2); //NO ME SALIÓ
-
-
 function combinarOrdenar2(array1, array2) {
     let ordenado1 = array1.sort();
     let ordenado2 = array2.sort();
@@ -130,3 +128,22 @@ function combinarOrdenar2(array1, array2) {
     console.log(combinado);
 }
 // combinarOrdenar2(numeros1, numeros2);//NO ME SALIÓ
+
+
+
+//9.- Eliminar duplicados 
+const duplicados = [1, 2, 2, 3, 4, 4, 5, 6, 6];
+function eliminarDuplicados(arr) {
+    let sinDuplicados = [];
+    for (i = 0; i < arr.length; i++) { //TRABAJA CON EL ARRAY VACÍO
+        if (!sinDuplicados.includes(arr[i])) { //NO ME SALIÓ 
+            sinDuplicados.push(arr[i]);
+        }
+    }
+    console.log(sinDuplicados);
+}
+eliminarDuplicados(duplicados);//CORRECTO, PERO VI LA SOLUCIÓN. 
+
+
+
+//10.- Reorganizar array 
