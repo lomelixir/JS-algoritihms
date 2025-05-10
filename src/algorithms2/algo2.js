@@ -67,14 +67,26 @@ function circuloAreaCircuferencia(radio) {
 
 
 
-//5.- Palíndromo //PENDIENTE
-// function palindromo(palabra) {
-//    for (let i = 0; i < palabra.length; i++) {
-//         let letra = palabra[i];
-//         for (let j = )
-//    }
-// }
-// palindromo("hola");//PENDIENTE 
+// 5.- Palíndromo //PENDIENTE
+function palindromo(palabra) {
+   let arr = Array.from(palabra);
+   console.log(arr);
+
+   let newArray = [...palabra];
+   console.log(newArray); 
+
+   let inicio = newArray[0];
+   let final = newArray.length - 1;
+   
+   while (inicio < final) {
+      if (inicio === final) {
+        inicio++;
+        final++;
+        console.log("true");  
+      } 
+    }
+}
+palindromo("radar");//PENDIENTE 
 
 
 
@@ -142,8 +154,7 @@ function eliminarDuplicados(arr) {
     }
     console.log(sinDuplicados);
 }
-eliminarDuplicados(duplicados);//CORRECTO, PERO VI LA SOLUCIÓN. 
+// eliminarDuplicados(duplicados);//CORRECTO, PERO VI LA SOLUCIÓN. 
 
 
 
-//10.- Reorganizar array 

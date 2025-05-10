@@ -127,20 +127,28 @@ function sumaTres() {
 //8.- Leer 4 números y visualizar el mayor de los cuatro. Método por array.
 const cuatroNumeros = [5, 3, 9, 8];
 
-function mayor(array) {
-    let primero = array[0];
-    let esMayor = 0;
-    if(primero > array[1]) {
-        for(i = 2; i <= array.length; i++) {
-
-        }
-    } else {
-        for(i = 3; i <= array.length; i++) {
-            console.log("ahora por aquí");
-        }
-    }
-    console.log(`El número ${esMayor} es el mayor de los cuatro.`);
+function mayor(arr) {
+    let sortArr = arr.sort();
+    let lastIndex = arr.length - 1;
+    let mayor = arr[lastIndex];
+    console.log(sortArr);
+    console.log(mayor);
 }
+
+mayor(cuatroNumeros);
+// function mayor(array) {
+//     let primero = array[0];
+//     let esMayor = 0;
+//     if(primero > array[1]) {
+//         for(i = 2; i <= array.length; i++) {
+
+//         }
+//     } else {
+//         for(i = 3; i <= array.length; i++) {
+//             console.log("ahora por aquí");
+//         }
+//     }
+//     console.log(`El número ${esMayor} es el mayor de los cuatro.`);
 // mayor(cuatroNumeros);
 
 
@@ -174,18 +182,6 @@ function mayor(array) {
 //     }
 // }
 // mayor2(cuatroNumeros);
-
-function mayor3(array) {
-    let primero = array[0];
-    let mayor = 0;
-    for(i = 0; i <= array.length; i++) {
-        mayor = array[i];
-        if(mayor > array[i]) {
-        }
-    }
-    
-}
-// mayor3(cuatroNumeros);
 
 
 
