@@ -1,3 +1,5 @@
+console.log("HELLO WORLD BORRADOR");
+
 //DIFERENTES PRUEBAS
 // let dividendo1 = 3;
 // function prueba(dividendo) {
@@ -116,18 +118,55 @@ let usuarios = [
 //     return u.activo;
 // })
 
-// console.log(algunoActivo);
+// // console.log(algunoActivo);
 
 
-const usuarios1 = [
-    {edad: 14, name: "Chobe"},
-    {edad: 28, name: "Andrea"},
-    {edad: 60, name: "Grace"},
-    {edad: 17, name: "Kevin"}
-];
+// const usuarios1 = [
+//     {edad: 14, name: "Chobe"},
+//     {edad: 28, name: "Andrea"},
+//     {edad: 60, name: "Grace"},
+//     {edad: 17, name: "Kevin"}
+// ];
 
-let mayores = usuarios1.filter(u => u.edad > 17);
-// console.log(mayores);
+// let mayores = usuarios1.filter(u => u.edad > 17);
+// // console.log(mayores);
 
-const lista = usuarios1.map(u => u.name);
-console.log(lista);
+// const lista = usuarios1.map(u => u.name);
+// console.log(lista);
+
+// function palindromo(x) {
+//     let string = x.toString();
+//     let arr = [...string];
+//     let inicio = arr[0];
+//     let final = arr[arr.length - 1];
+//     while (inicio < final) {
+//         if (inicio == final) {
+//             console.log(inicio, final);
+//             inicio++;
+//             final--;
+//         } else {
+//             console.log(inicio, final);
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+// palindromo(121);
+
+
+// let array = [0, 1];
+// let length = array.length;
+// console.log(length);
+
+function ocurrencias(word) {
+    let arr = [...word];
+    let foundLetter;
+    let timesFound = [];
+    let numberOfTimes;
+    for(i = 0; i < arr.length; i++) {
+        let foundLetter = arr.lastIndexOf(arr[i]);
+        console.log(foundLetter);
+    }
+    // console.log(arr);
+}
+ocurrencias("mortimer");

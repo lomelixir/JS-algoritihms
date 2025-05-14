@@ -69,24 +69,16 @@ function circuloAreaCircuferencia(radio) {
 
 // 5.- Palíndromo //PENDIENTE
 function palindromo(palabra) {
-   let arr = Array.from(palabra);
-   console.log(arr);
-
-   let newArray = [...palabra];
-   console.log(newArray); 
-
-   let inicio = newArray[0];
-   let final = newArray.length - 1;
-   
-   while (inicio < final) {
-      if (inicio === final) {
+    let arr = [...palabra];
+    let inicio = arr[0];
+    let final = arr[arr.length - 1];
+    while (inicio < final) {
         inicio++;
-        final++;
-        console.log("true");  
-      } 
+        final--;
     }
+    console.log(inicio, final);
 }
-palindromo("radar");//PENDIENTE 
+// palindromo("radar");//PENDIENTE 
 
 
 
@@ -158,3 +150,18 @@ function eliminarDuplicados(arr) {
 
 
 
+//10.- Ocurecnias econtradas en una palabra
+function ocurrencias(word) {
+    let arr = [...word];
+    let foundLetter;
+    let timesFound = [];
+    let numberOfTimes;
+    for(i = 0; i < arr.length; i++) {
+        foundLetter = arr.filter(a => a[i] == arr[i]);
+        timesFound = arr.push(foundLetter);
+        numberOfTimes = timesFound.length;
+        console.log(`La letra ${arr[i]} fue encontrada ${numberOfTimes} veces.`);
+    }
+    // console.log(arr);
+}
+ocurrencias("mortimer");
