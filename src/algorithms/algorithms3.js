@@ -102,4 +102,4 @@ function media(arr) {
     let media = sum / len;
     console.log(media);
 }
-media([1, 2, 3, 4]);//CORRECTO
+// media([1, 2, 3, 4]);//CORRECTO
