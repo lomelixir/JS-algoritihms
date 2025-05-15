@@ -158,15 +158,47 @@ let usuarios = [
 // let length = array.length;
 // console.log(length);
 
-function ocurrencias(word) {
-    let arr = [...word];
-    let foundLetter;
-    let timesFound = [];
-    let numberOfTimes;
-    for(i = 0; i < arr.length; i++) {
-        let foundLetter = arr.lastIndexOf(arr[i]);
-        console.log(foundLetter);
-    }
-    // console.log(arr);
-}
-ocurrencias("mortimer");
+// function ocurrencias(word) {
+//     let arr = [...word];
+//     let foundLetter;
+//     let timesFound = [];
+//     let numberOfTimes;
+//     for(i = 0; i < arr.length; i++) {
+//         let foundLetter = arr.lastIndexOf(arr[i]);
+//         console.log(foundLetter);
+//     }
+//     // console.log(arr);
+// }
+// ocurrencias("mortimer");+
+
+
+// let arr = [1, 2, 3, 4];
+// let suma = arr.reduce((acc, el) => {
+//     return acc + el;
+// }, 0);
+// console.log(suma);
+
+// let negativo = -1;
+// if (negativo < 0) {
+//     console.log("si es negativo");
+// }
+
+//media
+// function media(arr) {
+//     let sortArr = arr.sort();
+//     let sum = sortArr.reduce((acc, el) => {
+//         return acc + el;
+//     }, 0);
+
+//     if (sortArr.length % 2 == 0) {
+        
+//         console.log("par");
+//     } else {
+//         let arrLen = sortArr.length - 1;
+//         let mediaI = arrLen / 2;
+//         let media = sum / mediaI;
+//         console.log(media);
+//     }
+//     console.log(sum);
+// }
+// media([1, 2, 3]);
