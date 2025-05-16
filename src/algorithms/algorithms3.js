@@ -159,9 +159,17 @@ function enteros(arr) {
 function diezPares(arr) {
     let pares = [];
     if (arr.length >= 10) {
-        console.log("si se puede");
+        for (let variable of arr) {
+            if (variable % 2 == 0) {
+                pares.push(variable);
+            }
+        }
+        let suma = pares.reduce((acc, el) => {
+            return acc + el;
+        }, 0);
+        console.log(`El valor de la suma de os números pares es ${suma}.`);
     } else {
         console.log("Se necesitan mínimo 10 números.");
     }
 }
-diezPares([1, 2, 3, 4, 5, 6, 7, 8, 8, 9,33, 44, 55, 66, 754, 3,2,]);
+diezPares([1, 2, 3, 4, 5, 6, 7, 8, 8, 9,33, 44, 55, 66, 754, 3,2,]); //PENDIENTE
