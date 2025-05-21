@@ -202,3 +202,17 @@ let usuarios = [
 //     console.log(sum);
 // }
 // media([1, 2, 3]);
+
+const map = new Map();
+
+let nums = [2, 7, 11, 15];
+let target = 9;
+
+for (i = 0; i < nums.length; i++) {
+    if (nums[i] < target) {
+        map.set(nums[i]);
+    }
+}
+map.set("nums[i] + nums[i]", 10);
+console.log(map.size);
+console.log(map.get("nums[i] + nums[i]"));

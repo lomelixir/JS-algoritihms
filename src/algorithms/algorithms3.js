@@ -152,7 +152,7 @@ function enteros(arr) {
     console.log(`El valor de la media de los números impares es ${mediaImpar}.`);
 }
 // enteros([23, 56, 3, 5, 2, 99, 87, 45, 20, 11]); //CORRECTO
-
+ 
 
 
 //8.- Escribir la suma de los primeros 10 números pares.
@@ -172,4 +172,61 @@ function diezPares(arr) {
         console.log("Se necesitan mínimo 10 números.");
     }
 }
-diezPares([1, 2, 3, 4, 5, 6, 7, 8, 8, 9,33, 44, 55, 66, 754, 3,2,]); //PENDIENTE
+// diezPares([1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 33, 44, 55, 66, 754, 3, 2,]); //CORRECTO
+
+
+
+//9.- Dado 3 números deducir cual es el central. 
+function central(arr) {
+    let central = arr.length - 1;
+    let centralIndex = central / 2 
+    let centralValue = arr[centralIndex]; 
+    console.log(centralValue);
+}
+// central([1, 2, 3]); //CORRECTO.
+
+
+
+//10.- Escribir los diferentes métodos para deducir si una variable es par.
+function Par() {
+   this.usingForOf = function (arr) {
+        for (let number of arr) {
+            if (number % 2 == 0) {
+                console.log(`Método for-of. ${number} es par.`);
+            }
+        }
+    };
+
+    this.usingWhile = function (initialValue, finalValue) {
+        while (initialValue <= finalValue) {
+            if (initialValue % 2 == 0) {
+                console.log(`Método while. ${initialValue} es par.`);
+            }
+            initialValue++;
+        }
+    };
+
+    this.usingFor = function (arr) {
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                console.log(`Método for. ${arr[i]} es par.`);
+            }
+        }
+    };
+
+    this.usingDoWhile = function (initialValue, finalValue) {
+        do {
+            if (initialValue % 2 == 0) {
+                console.log(`Método do-while. ${initialValue} es par.`);
+            }
+            initialValue++;
+        } while (initialValue <= finalValue)
+    }
+}
+const esPar = new Par();
+// esPar.usingForOf([1, 67, 54, 3, 45, 98, 99, 23, 37]); //array as argument. CORRECTO
+// esPar.usingWhile(10, 20); //initial value and final value as argument. CORRECTO
+// esPar.usingFor([1, 67, 54, 3, 45, 98, 99, 23, 37]); //array as argument. CORRECTO
+// esPar.usingDoWhile(10, 19); //initial value and final value as argument. CORRECTO
+
+
