@@ -203,16 +203,39 @@ let usuarios = [
 // }
 // media([1, 2, 3]);
 
-const map = new Map();
 
-let nums = [2, 7, 11, 15];
-let target = 9;
+// let nums = [2, 7, 11, 15];
+// let target = 9;
 
-for (i = 0; i < nums.length; i++) {
-    if (nums[i] < target) {
-        map.set(nums[i]);
-    }
-}
-map.set("nums[i] + nums[i]", 10);
-console.log(map.size);
-console.log(map.get("nums[i] + nums[i]"));
+// for (i = 0; i < nums.length; i++) {
+//     if (nums[i] < target) {
+//         map.set(nums[i]);
+//     }
+// }
+// map.set("nums[i] + nums[i]", 10);
+// console.log(map.size);
+// console.log(map.get("nums[i] + nums[i]"));
+
+// const map = new Map();
+// map.set(1);
+// map.set(2);
+// map.set(3);
+
+// console.log(map.has(2));
+
+// const map1 = new Map();
+// map1.set(2, 0);
+// console.log(map1.size);
+// console.log(map1.get(2));
+
+let integer = 121;
+let iterable = integer.toString();
+let array1 = [...iterable];
+console.log(array1);
+
+let string = "hola";
+let array2 = [...string];
+console.log(array2);
+
+let array3 = Array.from(string);
+console.log(array3);
