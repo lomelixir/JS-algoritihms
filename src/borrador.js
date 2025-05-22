@@ -228,14 +228,16 @@ let usuarios = [
 // console.log(map1.size);
 // console.log(map1.get(2));
 
-let integer = 121;
-let iterable = integer.toString();
-let array1 = [...iterable];
-console.log(array1);
+// let integer = 121;
+// let iterable = integer.toString();
+// let array1 = [...iterable];
+// console.log(array1);
 
-let string = "hola";
-let array2 = [...string];
-console.log(array2);
+// let string = "hola";
+// let array2 = [...string];
+// console.log(array2);
 
-let array3 = Array.from(string);
-console.log(array3);
+// let array3 = Array.from(string);
+// console.log(array3);
+
+console.log(false && false);

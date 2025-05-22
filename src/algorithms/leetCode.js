@@ -35,4 +35,78 @@ function palindrome(x) {
     }
     console.log(false);
 }
-palindrome(121);
+// palindrome(121); //PRENDIENTE
+
+
+
+//3.- Roman to integer. 
+function romanToInt(s) {
+    let string = s;
+    let arr = [...string];
+    let toInt = [];
+    for (let value of arr) {
+         switch (value) {
+            case "I":
+                toInt.push(1);
+                break;
+            case "V":
+                toInt.push(5);
+                break;
+            case "X":
+                toInt.push(10);
+                break;
+            case "L":
+                toInt.push(50);
+                break;
+            case "C":
+                toInt.push(100);
+                break;
+            case "D":
+                toInt.push(500);
+                break;
+            case "M":
+                toInt.push(1000);
+                break;
+            default: 
+                console.log("Exist an error.");
+        }
+    }
+    
+    console.log(toInt);
+
+    let indiceI = toInt.indexOf(1);
+    let indiceV = toInt.indexOf(5);
+    let indiceX = toInt.indexOf(10);
+    let indiceL = toInt.indexOf(50);
+    let indiceC = toInt.indexOf(100);
+    let indiceD = toInt.indexOf(500);
+    let indiceM = toInt.indexOf(1000);
+
+    if (indiceI + 1 == indiceV) {
+        toInt.splice(indiceI, 2);
+        toInt.push(4);
+    } else if (indiceI + 1 == indiceX) {
+        toInt.splice(indiceI, 2);
+        toInt.push(9);
+    } else if (indiceX + 1 == indiceL) {
+        toInt.splice(indiceX, 2);
+        toInt.push(40);
+    } else if (indiceX + 1 == indiceC) {
+        toInt.splice(indiceX, 2);
+        toInt.push(90);
+    } else if (indiceC + 1 == indiceD) {
+        toInt.splice(indiceC, 2);
+        toInt.push(400);
+    } else if (indiceC + 1 == indiceM) {
+        toInt.splice(indiceC, 2);
+        toInt.push(900);
+    }
+
+    let suma = toInt.reduce((acc, el) => {
+        return acc + el;
+    }, 0);
+
+    console.log(toInt);
+    console.log(suma);
+}
+romanToInt("MCMXCIV"); //PENDIENTE.
